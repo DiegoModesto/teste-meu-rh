@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+      <!-- Campos do formulário conforme solicitado -->
+      <input formControlName="tipo" placeholder="Tipo de empresa" />
+      <input formControlName="nome" placeholder="Nome da empresa" />
+      <input formControlName="cnpj" placeholder="CNPJ" />
+      <input formControlName="cep" placeholder="CEP" />
+      <input formControlName="endereco" placeholder="Endereço" />
+      <input formControlName="bairro" placeholder="Bairro" />
+      <input formControlName="estado" placeholder="Estado" />
+      <input formControlName="cidade" placeholder="Cidade" />
+      <input formControlName="complemento" placeholder="Complemento" />
+      <input formControlName="celular" placeholder="Celular" />
+      <input formControlName="adminNome" placeholder="Nome do administrador" />
+      <input formControlName="adminCpf" placeholder="CPF do administrador" />
+      <input formControlName="adminEmail" placeholder="Email do administrador" />
+      <button type="button" (click)="cancelar()">Cancelar</button>
+      <button type="submit" [disabled]="form.invalid">Salvar</button>
+</form>

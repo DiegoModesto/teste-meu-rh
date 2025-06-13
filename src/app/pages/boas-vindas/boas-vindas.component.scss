@@ -1,0 +1,90 @@
+.boas-vindas-container {
+      display: flex;
+      min-height: 100vh;
+      background: #f5f7fa;
+
+      .boas-vindas-main {
+            flex: 1 1 65%;
+      }
+
+      .boas-vindas-menu {
+            width: 280px;
+            background: #1976d2;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.04);
+
+            ul {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  width: 100%;
+
+                  li {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 18px 10px;
+                        cursor: pointer;
+                        font-size: 1.05rem;
+                        font-weight: 500;
+                        background: rgba(255, 255, 255, 0.06);
+                        border-radius: 8px;
+                        margin: 0 8px;
+                        transition: background 0.2s;
+
+                        &:hover {
+                              background: rgba(255, 255, 255, 0.18);
+                        }
+
+                        .icon-empresa {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                        }
+                  }
+            }
+      }
+
+      .boas-vindas-lateral {
+            flex: 1;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 48px 40px;
+            box-shadow: -2px 0 16px rgba(0, 0, 0, 0.04);
+
+            h2 {
+                  font-size: 2rem;
+                  margin-bottom: 18px;
+                  color: #1976d2;
+            }
+
+            p {
+                  font-size: 1.1rem;
+                  margin-bottom: 32px;
+                  color: #333;
+            }
+
+            button {
+                  padding: 12px 32px;
+                  background: #1976d2;
+                  color: #fff;
+                  border: none;
+                  border-radius: 6px;
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  cursor: pointer;
+                  transition: background 0.2s;
+
+                  &:hover {
+                        background: #125ea2;
+                  }
+            }
+      }
+}

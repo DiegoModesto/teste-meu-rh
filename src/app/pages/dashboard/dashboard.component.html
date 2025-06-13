@@ -1,0 +1,16 @@
+<div class="dashboard">
+      <aside>
+            <h3>Empresa</h3>
+            <div *ngIf="empresa">
+                  <div><strong>Nome:</strong> {{ empresa.nome }}</div>
+                  <div><strong>CNPJ:</strong> {{ empresa.cnpj }}</div>
+                  <div><strong>Endereço:</strong> {{ empresa.endereco }}, {{ empresa.bairro }}, {{ empresa.cidade }} -
+                        {{ empresa.estado }}</div>
+                  <div><strong>Administrador:</strong> {{ empresa.adminNome }} ({{ empresa.adminEmail }})</div>
+            </div>
+      </aside>
+      <main>
+            <h2>Bem-vindo ao Dashboard!</h2>
+            <!-- Conteúdo principal -->
+      </main>
+</div>

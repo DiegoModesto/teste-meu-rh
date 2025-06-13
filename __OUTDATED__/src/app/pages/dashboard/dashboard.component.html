@@ -1,0 +1,11 @@
+<div class="dashboard">
+      <h2>Dashboard</h2>
+      <p>Bem-vindo ao painel principal do Meu RH.</p>
+</div>
+
+<aside *ngIf="empresa">
+      <h3>{{ empresa.nome }}</h3>
+      <p>CNPJ: {{ empresa.cnpj }}</p>
+      <p>Cidade: {{ empresa.cidade }}</p>
+      <p>Estado: {{ empresa.estado }}</p>
+</aside>

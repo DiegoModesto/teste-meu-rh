@@ -1,0 +1,36 @@
+<div class="registro-container">
+      <div class="registro-imagem">
+            <!-- Substitua o src pela imagem desejada -->
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                  alt="Imagem de boas-vindas" />
+      </div>
+      <div class="registro-formulario">
+            <form [formGroup]="form" (ngSubmit)="registrar()">
+                  <label>
+                        Nome
+                        <input formControlName="nome" placeholder="Nome" type="text" />
+                  </label>
+                  <label>
+                        E-mail
+                        <input formControlName="email" placeholder="E-mail" type="email" />
+                  </label>
+                  <label>
+                        Senha
+                        <input formControlName="senha" placeholder="Senha" type="password" />
+                  </label>
+                  <label>
+                        Repetir senha
+                        <input formControlName="repetirSenha" placeholder="Repetir senha" type="password" />
+                  </label>
+                  <div *ngIf="form.errors?.senhasDiferentes" class="erro-senha">As senhas não coincidem.</div>
+                  <label class="checkbox-termos">
+                        <input type="checkbox" formControlName="aceite" />
+                        Eu aceito os
+                        <a href="#" tabindex="-1">termos de uso & privacidade</a>
+                        e o
+                        <a href="#" tabindex="-1">contrato de serviço</a>
+                  </label>
+                  <button type="submit" [disabled]="form.invalid">Registrar</button>
+            </form>
+      </div>
+</div>

@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+      <input formControlName="nome" placeholder="Nome da Empresa" />
+      <input formControlName="cnpj" placeholder="CNPJ" />
+      <input formControlName="cidade" placeholder="Cidade" />
+      <input formControlName="estado" placeholder="Estado" />
+      <button type="button" (click)="cancelar()">Cancelar</button>
+      <button type="submit" [disabled]="form.invalid">Salvar</button>
+</form>
