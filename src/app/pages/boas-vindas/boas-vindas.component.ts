@@ -10,9 +10,12 @@ import { AuthService } from '../../core/services/auth.service';
 })
 export class BoasVindasComponent {
       nome = '';
+      email = '';
 
       constructor(private auth: AuthService, private router: Router) {
-            this.nome = this.auth.getUser()?.nome || '';
+            const user = this.auth.getUser();
+            this.nome = user?.nome || '';
+            this.email = user?.email || '';
       }
 
       iniciarConfiguracao() {

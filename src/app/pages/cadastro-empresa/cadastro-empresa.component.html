@@ -1,18 +1,70 @@
-<form [formGroup]="form" (ngSubmit)="salvar()">
-      <!-- Campos do formulário conforme solicitado -->
-      <input formControlName="tipo" placeholder="Tipo de empresa" />
-      <input formControlName="nome" placeholder="Nome da empresa" />
-      <input formControlName="cnpj" placeholder="CNPJ" />
-      <input formControlName="cep" placeholder="CEP" />
-      <input formControlName="endereco" placeholder="Endereço" />
-      <input formControlName="bairro" placeholder="Bairro" />
-      <input formControlName="estado" placeholder="Estado" />
-      <input formControlName="cidade" placeholder="Cidade" />
-      <input formControlName="complemento" placeholder="Complemento" />
-      <input formControlName="celular" placeholder="Celular" />
-      <input formControlName="adminNome" placeholder="Nome do administrador" />
-      <input formControlName="adminCpf" placeholder="CPF do administrador" />
-      <input formControlName="adminEmail" placeholder="Email do administrador" />
-      <button type="button" (click)="cancelar()">Cancelar</button>
-      <button type="submit" [disabled]="form.invalid">Salvar</button>
+<form [formGroup]="form" (ngSubmit)="salvar()" class="cadastro-empresa-form">
+      <!-- Linha 1 -->
+      <div class="form-row">
+            <label>
+                  Tipo de Empresa
+                  <input formControlName="tipo" placeholder="Tipo de empresa" />
+            </label>
+      </div>
+      <!-- Linha 2 -->
+      <div class="form-row">
+            <label>
+                  Nome da Empresa<span class="obrigatorio">*</span>
+                  <input formControlName="nome" placeholder="Nome da empresa" />
+            </label>
+            <label>
+                  CNPJ da Empresa<span class="obrigatorio">*</span>
+                  <input formControlName="cnpj" placeholder="CNPJ" />
+            </label>
+      </div>
+      <!-- Linha 3 -->
+      <div class="form-row">
+            <label>
+                  CEP
+                  <input formControlName="cep" placeholder="CEP" />
+            </label>
+            <label>
+                  Endereço
+                  <input formControlName="endereco" placeholder="Endereço" />
+            </label>
+            <label>
+                  Bairro
+                  <input formControlName="bairro" placeholder="Bairro" />
+            </label>
+            <label>
+                  Estado
+                  <input formControlName="estado" placeholder="Estado" />
+            </label>
+            <label>
+                  Cidade
+                  <input formControlName="cidade" placeholder="Cidade" />
+            </label>
+            <label>
+                  Complemento
+                  <input formControlName="complemento" placeholder="Complemento" />
+            </label>
+      </div>
+      <!-- Linha 4 -->
+      <div class="form-row">
+            <label>
+                  Celular<span class="obrigatorio">*</span>
+                  <input formControlName="celular" placeholder="Celular" />
+            </label>
+            <label>
+                  Nome do administrador<span class="obrigatorio">*</span>
+                  <input formControlName="adminNome" placeholder="Nome do administrador" />
+            </label>
+            <label>
+                  CPF
+                  <input formControlName="adminCpf" placeholder="CPF do administrador" />
+            </label>
+            <label>
+                  E-Mail<span class="obrigatorio">*</span>
+                  <input formControlName="adminEmail" placeholder="Email do administrador" />
+            </label>
+      </div>
+      <div class="form-actions">
+            <button type="button" (click)="cancelar()">Cancelar</button>
+            <button type="submit" [disabled]="form.invalid">Salvar</button>
+      </div>
 </form>

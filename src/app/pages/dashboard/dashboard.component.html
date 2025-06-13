@@ -1,16 +1,117 @@
-<div class="dashboard">
-      <aside>
-            <h3>Empresa</h3>
-            <div *ngIf="empresa">
-                  <div><strong>Nome:</strong> {{ empresa.nome }}</div>
-                  <div><strong>CNPJ:</strong> {{ empresa.cnpj }}</div>
-                  <div><strong>Endereço:</strong> {{ empresa.endereco }}, {{ empresa.bairro }}, {{ empresa.cidade }} -
-                        {{ empresa.estado }}</div>
-                  <div><strong>Administrador:</strong> {{ empresa.adminNome }} ({{ empresa.adminEmail }})</div>
+<div class="dashboard-container">
+      <nav class="dashboard-menu">
+            <div class="menu-section">EMPRESA</div>
+            <ul>
+                  <li>
+                        <span class="icon">
+                              <!-- Ícone empresa -->
+                              <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <rect x="3" y="7" width="18" height="13" rx="2" />
+                                    <path d="M16 3v4M8 3v4M3 10h18" />
+                                    <circle cx="8.5" cy="14.5" r="1.5" />
+                                    <circle cx="15.5" cy="14.5" r="1.5" />
+                              </svg>
+                        </span>
+                        <span>Config. da Empresa</span>
+                        <ul class="submenu">
+                              <li>Minha empresa</li>
+                              <li>Benefícios</li>
+                              <li>Áreas</li>
+                              <li>Cargas</li>
+                              <li>Filiais</li>
+                        </ul>
+                  </li>
+                  <li>
+                        <span class="icon">
+                              <!-- Ícone dashboard -->
+                              <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <rect x="3" y="13" width="7" height="8" rx="1" />
+                                    <rect x="14" y="3" width="7" height="18" rx="1" />
+                              </svg>
+                        </span>
+                        <span>Config. de Sistema</span>
+                  </li>
+            </ul>
+            <div class="menu-section">VAGAS</div>
+            <ul>
+                  <li>
+                        <span class="icon">
+                              <!-- Ícone pessoa -->
+                              <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="7" r="4" />
+                                    <path d="M5.5 21a7.5 7.5 0 0 1 13 0" />
+                              </svg>
+                        </span>
+                        <span>Gestão de vagas</span>
+                  </li>
+            </ul>
+            <div class="menu-section">USUÁRIOS</div>
+            <ul>
+                  <li>
+                        <span class="icon">
+                              <!-- Ícone crachá -->
+                              <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                                    <circle cx="12" cy="10" r="3" />
+                                    <path d="M6 18v-1a4 4 0 0 1 8 0v1" />
+                              </svg>
+                        </span>
+                        <span>Meu perfil</span>
+                  </li>
+                  <li>
+                        <span class="icon">
+                              <!-- Ícone pessoas -->
+                              <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="7" r="4" />
+                                    <circle cx="17" cy="7" r="4" />
+                                    <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" />
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4" />
+                              </svg>
+                        </span>
+                        <span>Todos usuários</span>
+                  </li>
+            </ul>
+      </nav>
+      <main class="dashboard-content">
+            <div class="dashboard-actions">
+                  <button>Editar empresa</button>
+                  <button>Gestão de filiais</button>
+                  <button>Faixas salariais</button>
+                  <button>Job Level</button>
             </div>
-      </aside>
-      <main>
-            <h2>Bem-vindo ao Dashboard!</h2>
-            <!-- Conteúdo principal -->
+            <div class="dashboard-dados">
+                  <h3>Dados da Empresa</h3>
+                  <div *ngIf="empresa">
+                        <!-- Linha 1 -->
+                        <div class="dashboard-dados-row">
+                              <div><strong>Nome da Empresa:</strong> {{ empresa.nome }}</div>
+                              <div><strong>CNPJ:</strong> {{ empresa.cnpj }}</div>
+                              <div><strong>Nome do Administrador:</strong> {{ empresa.adminNome }}</div>
+                        </div>
+                        <!-- Linha 2 -->
+                        <div class="dashboard-dados-row">
+                              <div><strong>CPF do Administrador:</strong> {{ empresa.adminCpf }}</div>
+                              <div><strong>E-Mail:</strong> {{ empresa.adminEmail }}</div>
+                              <div><strong>Telefone:</strong> {{ empresa.celular }}</div>
+                        </div>
+                        <!-- Linha 3 -->
+                        <div class="dashboard-dados-row">
+                              <div>
+                                    <strong>Endereço:</strong>
+                                    {{ empresa.cep }},
+                                    {{ empresa.endereco }},
+                                    {{ empresa.bairro }},
+                                    {{ empresa.estado }},
+                                    {{ empresa.cidade }},
+                                    {{ empresa.complemento }}
+                              </div>
+                        </div>
+                  </div>
+            </div>
       </main>
 </div>

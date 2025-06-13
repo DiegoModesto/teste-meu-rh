@@ -15,19 +15,19 @@ export class CadastroEmpresaComponent {
 
       constructor(private fb: FormBuilder, private empresaService: EmpresaService, private router: Router) {
             this.form = this.fb.group({
-                  tipo: ['', Validators.required],
-                  nome: ['', Validators.required],
-                  cnpj: ['', Validators.required],
-                  cep: ['', Validators.required],
-                  endereco: ['', Validators.required],
-                  bairro: ['', Validators.required],
-                  estado: ['', Validators.required],
-                  cidade: ['', Validators.required],
-                  complemento: [''],
-                  celular: ['', Validators.required],
-                  adminNome: ['', Validators.required],
-                  adminCpf: ['', Validators.required],
-                  adminEmail: ['', [Validators.required, Validators.email]]
+                  tipo: ['Tecnologia', Validators.required],
+                  nome: ['Empresa Mockada Ltda', Validators.required],
+                  cnpj: ['12.345.678/0001-99', Validators.required],
+                  cep: ['01001-000', Validators.required],
+                  endereco: ['Rua Exemplo', Validators.required],
+                  bairro: ['Centro', Validators.required],
+                  estado: ['SP', Validators.required],
+                  cidade: ['São Paulo', Validators.required],
+                  complemento: ['Sala 101'],
+                  celular: ['(11) 91234-5678', Validators.required],
+                  adminNome: ['João Mock', Validators.required],
+                  adminCpf: ['123.456.789-00', Validators.required],
+                  adminEmail: ['joao.mock@empresa.com', [Validators.required, Validators.email]]
             });
       }
 
