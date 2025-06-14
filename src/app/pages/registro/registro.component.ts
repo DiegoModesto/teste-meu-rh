@@ -16,10 +16,10 @@ export class RegistroComponent {
       constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
             this.form = this.fb.group(
                   {
-                        nome: ['', Validators.required],
-                        email: ['', [Validators.required, Validators.email]],
-                        senha: ['', [Validators.required, Validators.minLength(6)]],
-                        repetirSenha: ['', Validators.required],
+                        nome: ['Diego', Validators.required],
+                        email: ['teste@teste.com', [Validators.required, Validators.email]],
+                        senha: ['@123mudar', [Validators.required, Validators.minLength(6)]],
+                        repetirSenha: ['@123mudar', Validators.required],
                         aceite: [false, Validators.requiredTrue]
                   },
                   { validators: this.senhasIguais }

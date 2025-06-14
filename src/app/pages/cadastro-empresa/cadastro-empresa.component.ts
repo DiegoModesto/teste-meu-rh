@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmpresaService } from '../../core/services/empresa.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
       selector: 'app-cadastro-empresa',
       standalone: true,
-      imports: [ReactiveFormsModule],
+      imports: [CommonModule, ReactiveFormsModule],
       templateUrl: './cadastro-empresa.component.html',
       styleUrls: ['./cadastro-empresa.component.scss']
 })
